@@ -1,4 +1,14 @@
-// Footer
-footer {
-    display: block;
+.container {
+
+    // .container_footer
+
+    &_footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: brown;
+    }
 }
+
+.footer {}

@@ -110,9 +110,6 @@ body.locked {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   background-color: bisque;
 }
 
@@ -124,8 +121,100 @@ body.locked {
   background-color: cadetblue;
 }
 
-footer {
-  display: block;
+.container_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: brown;
+}
+
+.section_menu {
+  width: 30%;
+  height: 800px;
+  float: left;
+  background-color: aquamarine;
+}
+
+.navbar_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu__item {
+  margin: 15px 0 15px 0;
+}
+
+.menu__item-link {
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 20px;
+  font-size: 22px;
+  color: black;
+  padding: 0 10px;
+}
+
+.menu__item-link_active {
+  background: aquamarine;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 20px;
+  font-size: 22px;
+  color: black;
+  padding: 0 10px;
+}
+
+.menu__item-link:hover {
+  background: black;
+  color: wheat;
+}
+
+.section_shop {
+  width: 70%;
+  float: right;
+  background-color: blue;
+}
+
+.container_shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 25px 0 25px 0;
+}
+
+.shop_block-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: aliceblue;
+}
+
+.block {
+  width: 30%;
+  background-color: beige;
 }
 
 @media (max-width: 1449.98px) {
