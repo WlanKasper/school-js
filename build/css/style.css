@@ -97,6 +97,37 @@ body.locked {
   }
 }
 
+.container_header {
+  width: 100%;
+  background-color: aqua;
+}
+
+.navbar_header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: bisque;
+}
+
+.header_logo {
+  background-color: brown;
+}
+
+.header_title {
+  background-color: cadetblue;
+}
+
+footer {
+  display: block;
+}
+
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;

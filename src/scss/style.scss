@@ -4,8 +4,10 @@
 @import './global';
 
 // Sections or Pages SCSS-files imports
-// @import './header';
-// @import './footer';
+@import './header';
+@import './footer';
+
+@import './main/menu';
 
 // Libs
 // @import './libs/swiper';

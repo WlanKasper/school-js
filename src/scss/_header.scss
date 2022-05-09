@@ -1,1 +1,48 @@
-// Header
+.container {
+
+    // .container_header
+    &_header {
+        width: 100%;
+
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+
+        background-color: aqua;
+    }
+}
+
+.navbar {
+    // .navbar_header
+    &_header {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        background-color: bisque;
+    }
+}
+
+.header {
+
+    // .header_logo
+
+    &_logo {
+        background-color: brown;
+    }
+
+    // .header_title
+
+    &_title {
+        background-color: cadetblue;
+    }
+}
+
+.title {
+
+    // .title_style
+
+    &_style {}
+}
