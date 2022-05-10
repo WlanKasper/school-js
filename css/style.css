@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'CherryBomb';
+    src: url('../fonts/CherryBomb.ttf') format('truetype');
+}
+
+.container {
+    padding: 0 80px;
+    font-size: 24px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'CherryBomb';
+}
+
+.container_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: antiquewhite;
+}
+
+.title_style {
+    padding: 16px 0;
+    font-size: 28px;
+}
+
+.container_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+
+    background-color: #C4C4C4;
+}
+
+.block_container {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.hallway_middle {
+    width: 480px;
+    height: 50px;
+    background-color: #DDDDDD;
+}
+
+.container_bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_bot_top {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.hallway-y {
+    width: 50px;
+    height: 140px;
+    background-color: #DDDDDD;
+}
+
+.block-reception {}
+
+.hallway-x {
+    width: 200px;
+    height: 50px;
+    background-color: #DDDDDD;
+}
+
+.hallway-y-right {
+    margin-left: 150px;
+}
+
+.hallway-y-bot {
+    margin: 0 150px;
+}
+
+.container_bot_bot {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.input-block {
+    width: 350px;
+    height: 150px;
+
+    margin-top: 25px;
+
+    background-color: #C4C4C4;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.input-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btnOK {
+    width: 100px;
+    height: 85px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FF0000;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-next{
+    width: 120px;
+    height: 85px;
+}
+
+input{
+    height: 45px;
+    width: 180px;
+    margin: 5px 0;
+
+    font-family: 'CherryBomb';
+    font-size: 22px;
+}
+
+.reception-output-form{
+    font-size: 10px;
+}

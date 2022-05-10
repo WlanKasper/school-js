@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicina</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container container_header">
+            <div class="header_logo">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+            <div class="header_title">
+                <p class="title_style">
+                    Medical Center
+                </p>
+            </div>
+            <div class="header_logo">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="container_top">
+            <div class="block_container">
+                <p>
+                    Waiting Room
+                </p>
+                <div class="block">
+
+                </div>
+            </div>
+
+            <div class="middle">
+                <!-- <div class="hallway_middle">
+
+                </div> -->
+                <div class="btn btn-next" onclick="pushClientToDocFromWaitList()">
+                    <p>
+                        PUSH
+                    </p>
+                    
+                </div>
+
+            </div>
+            <div class="block_container">
+                <p>
+                    Doctor's Office
+                </p>
+                <div class="block">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container_bot">
+            <div class="container_bot_top">
+                <div class="hallway-block-left">
+                    <div class="hallway-y hallway-y-left">
+
+                    </div>
+                    <div class="hallway-x hallway-x-left">
+                    </div>
+
+                </div>
+
+                <div class="block_container">
+                    <p>
+                        Reception
+                    </p>
+                    <div class="block block-reception">
+                        <form name="formOutputInfo" class="reception-output">
+                            <input type="text" name="textview" class="reception-output-form">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hallway-block-right">
+
+                    <div class="hallway-y hallway-y-right">
+
+                    </div>
+                    <div class="hallway-x hallway-x-right">
+
+                    </div>
+                </div>
+            </div>
+            <div class="container_bot_bot">
+                <div class="input-block">
+                    
+                </div>
+                <div class="hallway-y hallway-y-bot">
+
+                </div>
+                <div class="input-block">
+                    <form name="formInputInfo" class="input-left">
+                        <input type="text" name="inputName">
+                        <input type="text" name="inputProblem">
+                    </form>
+                    <div class="input-right">
+                        <div class="btn btnOK" onclick="addNewClient()">
+                            <p>
+                                OK
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container container_header">
+        <div class="header_display">
+            <form name="form"><input type="text" name="textview" readonly></form>
+        </div>
+    </div>
+
+    <div class="container container_main">
+        <div class="item" onclick="addNewClient()">NEXT</div>
+
+        
+
+        <form name="form2"><input type="text" name="textviewClient"></form>
+    </div> -->
+</body>
+
+<script src="./js/scripts.js"></script>
+
+</html>
