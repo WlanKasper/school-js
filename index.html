@@ -34,7 +34,11 @@
                     Waiting Room
                 </p>
                 <div class="block">
-
+                    <div id="waiter-block">
+                        <form name="formWaiterOutput" class="waiter-output">
+                            <input type="text" name="textview" class="waiter-output-form">
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -46,7 +50,7 @@
                     <p>
                         PUSH
                     </p>
-                    
+
                 </div>
 
             </div>
@@ -55,7 +59,12 @@
                     Doctor's Office
                 </p>
                 <div class="block">
-
+                    <div id="doctor-block">
+                        <p>Pacient</p>
+                        <form name="formDoctorOutput" class="form-doctor-output">
+                            <input type="text" name="textview" class="doc-output-form">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,9 +85,22 @@
                         Reception
                     </p>
                     <div class="block block-reception">
-                        <form name="formOutputInfo" class="reception-output">
+                        <div class="input-block">
+                            <form name="formInputInfo" class="input-left">
+                                <input type="text" name="inputName">
+                                <input type="text" name="inputProblem">
+                            </form>
+                            <div class="input-right">
+                                <div class="btn btnOK" onclick="addNewClient()">
+                                    <p>
+                                        OK
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <form name="formOutputInfo" class="reception-output">
                             <input type="text" name="textview" class="reception-output-form">
-                        </form>
+                        </form> -->
                     </div>
                 </div>
 
@@ -93,25 +115,10 @@
                 </div>
             </div>
             <div class="container_bot_bot">
-                <div class="input-block">
-                    
-                </div>
                 <div class="hallway-y hallway-y-bot">
 
                 </div>
-                <div class="input-block">
-                    <form name="formInputInfo" class="input-left">
-                        <input type="text" name="inputName">
-                        <input type="text" name="inputProblem">
-                    </form>
-                    <div class="input-right">
-                        <div class="btn btnOK" onclick="addNewClient()">
-                            <p>
-                                OK
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
