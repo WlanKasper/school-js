@@ -2,25 +2,18 @@
 
     // .container_header
     &_header {
-        width: 100%;
-
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-
-        background-color: aqua;
+        background-color: rgb(198, 198, 198);
     }
 }
 
 .navbar {
+
     // .navbar_header
     &_header {
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         display: flex;
         justify-content: space-around;
-
-        background-color: bisque;
     }
 }
 
@@ -29,13 +22,18 @@
     // .header_logo
 
     &_logo {
-        background-color: brown;
+        img {
+        max-height: 80px;
+        max-width: 80px;
+            object-fit: contain;
+        }
     }
 
     // .header_title
 
     &_title {
-        background-color: cadetblue;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -43,5 +41,8 @@
 
     // .title_style
 
-    &_style {}
+    &_style {
+        font-family: 'old';
+        font-size: 34px;
+    }
 }

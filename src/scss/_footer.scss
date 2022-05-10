@@ -7,8 +7,12 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        background-color: brown;
+        background-color: rgb(198, 198, 198);
+        padding: 10px 0;
     }
 }
 
-.footer {}
+.footer {
+    font-family: 'old';
+        font-size: 34px;
+}

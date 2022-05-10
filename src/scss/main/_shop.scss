@@ -3,10 +3,7 @@
     // .section_shop
 
     &_shop {
-        width: 70%;
-        // height: 800px;
-        float: right;
-        background-color: blue;
+        
     }
 }
 .container {
@@ -14,12 +11,7 @@
     // .container_shop
 
     &_shop {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-
-        margin: 25px 0 25px 0;
+       
     }
 }
 .shop {
@@ -27,16 +19,11 @@
     // .shop_block-group
 
     &_block-group {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: aliceblue;
+        
     }
 }
 .block {
-    width: 30%;
-    // height: 300px;
-    background-color: beige;
+    
     // .block_text
 
     &_text {

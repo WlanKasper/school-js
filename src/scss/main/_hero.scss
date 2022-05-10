@@ -1,0 +1,150 @@
+.section {
+
+    // .section_hero
+
+    &_hero {
+    }
+}
+.container {
+
+    // .container_hero
+
+    &_hero {
+        display: flex;
+        // align-items: center;
+        justify-content: space-around;
+        // flex-direction: column;
+        padding: 0;
+    }
+
+    // .container_menu
+
+    &_menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    // .container_shop
+
+    &_shop {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+.hero {
+    // .hero_menu
+
+    &_menu {
+        width: 30%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    // .hero_shop
+
+    &_shop {
+        margin: 0;
+        padding: 10px;
+        width: 70%;
+        background-color: rgb(255, 255, 255);
+    }
+}
+.navbar {
+
+    // .navbar_menu
+
+    &_menu {
+        
+    }
+}
+.menu {
+    display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+    // .menu__item
+
+    &__item {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    // .menu__item-link
+
+    &__item-link {
+        font-family: 'old';
+        font-size: 28px;
+        color: white;
+        padding: 0 10px;
+
+        &_active {
+            background: aquamarine;
+            font-family: 'old';
+            font-size: 28px;
+            color: wheat;
+            padding: 0 10px;
+            
+        }
+    }
+
+    &__item-link:hover {
+        color: yellow;
+    }
+}
+.shop {
+
+    // .shop_block-group
+
+    &_block-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @media (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+
+        margin-bottom: 20px;
+    }
+}
+.block {
+    
+    width: 70%;
+    // height: 50%;
+    min-height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border: 1px solid black;
+
+    @media (max-width: $breakpoint768) {
+        margin-bottom: 0;
+    }
+
+    // .block_text
+
+    &_text {
+        padding: 15px;
+    }
+
+
+
+        img{
+            max-width: 60%;
+            object-fit: contain;
+        }
+
+    
+}
