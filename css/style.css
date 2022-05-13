@@ -108,6 +108,10 @@ p {
     flex-direction: row;
 }
 
+.header-item{
+    width: 200px;
+}
+
 .input-block {
     width: 350px;
     height: 150px;
@@ -147,12 +151,19 @@ p {
     background-color: #00ff00;
 }
 
-#doctor-block {
-
+.doctor-text{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#doctor-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 
     border-radius: 25px;
     width: 98%;
@@ -161,14 +172,14 @@ p {
 }
 
 .btn-next {
-    width: 120px;
-    height: 85px;
+    width: 100px;
+    height: 80px;
 }
 
 input {
     height: 45px;
     width: 180px;
-    border-radius: 5px;
+    border-radius: 25px;
     border: antiquewhite;
     margin: 5px 0;
 
@@ -183,6 +194,10 @@ input {
 }
 
 .doc-output-form{
-    width: 250px;
+    width: 220px;
     height: 100px;
+}
+
+.doctor-push {
+    align-self: center;
 }

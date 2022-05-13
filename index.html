@@ -16,9 +16,19 @@
             <div class="header_logo">
                 <img src="./img/logo.svg" alt="logo">
             </div>
+            <div class="header-item header_score">
+                <p id="score">
+                    Clients: 
+                </p>
+            </div>
             <div class="header_title">
                 <p class="title_style">
                     Medical Center
+                </p>
+            </div>
+            <div class="header-item header_time">
+                <p id="time">
+                    Mid Time: 
                 </p>
             </div>
             <div class="header_logo">
@@ -43,13 +53,7 @@
             </div>
 
             <div class="middle">
-                <!-- <div class="hallway_middle">
-
-                </div> -->
-                <div class="btn btn-next" onclick="pushClientToDocFromWaitList()">
-                    <p>
-                        PUSH
-                    </p>
+                <div id="middle_hallway">
 
                 </div>
 
@@ -60,10 +64,20 @@
                 </p>
                 <div class="block">
                     <div id="doctor-block">
-                        <p>Pacient</p>
-                        <form name="formDoctorOutput" class="form-doctor-output">
-                            <input type="text" name="textview" class="doc-output-form">
-                        </form>
+                        <div class="doctor-text">
+                            <p>Pacient</p>
+                            <form name="formDoctorOutput" class="form-doctor-output">
+                                <input type="text" name="textview" class="doc-output-form">
+                            </form>
+                        </div>
+                        <div class="doctor-push">
+                            <div class="btn btn-next" onclick="pushClientToDocFromWaitList()">
+                                <p>
+                                    NEXT
+                                </p>
+            
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
