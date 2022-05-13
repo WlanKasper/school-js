@@ -3,6 +3,7 @@ const input_problem = document.formInputInfo.inputProblem;
 
 const waiting_room = document.formWaiterOutput.textview;
 const doctors_room = document.formDoctorOutput.textview;
+const waiters = document.getElementById('waitCounter');
 
 const score = document.getElementById('score');
 let jsScore = 0;
@@ -52,12 +53,15 @@ function addNewClientToWaitList(client) {
     console.log('Client ' + client + ' waiting');
     goToLeftHallway();
     waitList.push('Clien: ' + client);
-    waiting_room.value = waitList.join('');
+    waiting_room.value = waitList.join('; ');
+    modWaiters();
 }
 
 function displayNextClient(client) {
     if (client) {
         doctors_room.value = client;
+    } else if (waitList.length != 0) {
+        doctors_room.value = 'Next ' + waitList[0];
     } else {
         doctors_room.value = 'Im free';
     }
@@ -73,7 +77,7 @@ function healClient(client) {
     console.log('Doc healing: ' + client);
     isBusyDoc = true;
     doctorBorder.style.borderColor = RED;
-    waiting_room.value = waitList.toString();
+    waiting_room.value = waitList.join('; ');
     setTimeout(() => {
         isBusyDoc = false;
         doctorBorder.style.borderColor = GREEN;
@@ -81,7 +85,7 @@ function healClient(client) {
         updateTime();
         console.log('Doc cured');
         displayNextClient();
-    }, getRandomInt(500, 6000));
+    }, getRandomInt(1000, 6000));
 }
 
 function distributeClient(client) {
@@ -100,6 +104,7 @@ function pushClientToDocFromWaitList() {
             console.log('Called client: ' + client);
             goToMiddleHallway();
             pushClientToDoc(client);
+            modWaiters();
         } else {
             console.log('Doc is occupied!');
         }
@@ -158,4 +163,8 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+
+function modWaiters() {
+    waiters.innerHTML = 'Waiting Room: ' + waitList.length
 }
