@@ -37,31 +37,30 @@ let isBusyDoc = false;
 
 function addNewClient() {
     let client = input_name.value + ': ' + input_problem.value;
-    if (client != ': ') {
-        console.log('Пришел новый клиент: ' + client);
+    if (input_name.value.toString().trim() != '' && input_problem.value.toString().trim() != '') {
+        console.log('Arrived new client: ' + client);
         distributeClient(client);
+        input_name.value = '';
+        input_problem.value = '';
     } else {
-        console.log('Пустой ввод');
+        console.log('Empty input');
+        errorInput();
     }
 }
 
 function addNewClientToWaitList(client) {
-    console.log('Клиент ' + client + ' ожидает');
+    console.log('Client ' + client + ' waiting');
     goToLeftHallway();
-    waitList.push(client);
-    waiting_room.value = waitList.toString();
+    waitList.push('Clien: ' + client);
+    waiting_room.value = waitList.join('');
 }
 
 function displayNextClient(client) {
     if (client) {
         doctors_room.value = client;
-    } else if (waitList.length != 0) {
-        doctors_room.value = 'Next client: ' + waitList[0];
-        startTime = new Date().getTime();
     } else {
         doctors_room.value = 'Im free';
     }
-
 }
 
 function pushClientToDoc(client) {
@@ -69,26 +68,26 @@ function pushClientToDoc(client) {
     displayNextClient(client);
 }
 
-async function healClient(client) {
-    console.log('Доктор лечит: ' + client);
+function healClient(client) {
+    startTime = new Date().getTime();
+    console.log('Doc healing: ' + client);
     isBusyDoc = true;
     doctorBorder.style.borderColor = RED;
     waiting_room.value = waitList.toString();
     setTimeout(() => {
         isBusyDoc = false;
         doctorBorder.style.borderColor = GREEN;
-        displayNextClient();
-        console.log('Доктор закончил');
         updateScore();
         updateTime();
-    }, 8000);
+        console.log('Doc cured');
+        displayNextClient();
+    }, getRandomInt(500, 6000));
 }
 
 function distributeClient(client) {
-    if (!isBusyDoc && waitList.length == 0) {
+    if (!isBusyDoc) {
         goToRightHallway();
         pushClientToDoc(client);
-        startTime = new Date().getTime();
     } else {
         addNewClientToWaitList(client);
     }
@@ -98,15 +97,15 @@ function pushClientToDocFromWaitList() {
     if (waitList.length != 0) {
         if (!isBusyDoc) {
             client = waitList.shift();
-            console.log('Вызван клиент: ' + client);
+            console.log('Called client: ' + client);
             goToMiddleHallway();
             pushClientToDoc(client);
         } else {
-            console.log('Доктор занят!');
+            console.log('Doc is occupied!');
         }
 
     } else {
-        console.log('Больше нет клиентов');
+        console.log('No more clients');
     }
 }
 
@@ -116,7 +115,7 @@ async function goToLeftHallway() {
     setTimeout(() => {
         hallway_left_top.style.background = ' #DDDDDD';
         hallway_left_bot.style.background = ' #DDDDDD';
-    }, 2000);
+    }, 1500);
 }
 
 async function goToRightHallway() {
@@ -125,23 +124,38 @@ async function goToRightHallway() {
     setTimeout(() => {
         hallway_right_bot.style.background = ' #DDDDDD';
         hallway_right_top.style.background = ' #DDDDDD';
-    }, 2000);
+    }, 1500);
 }
 
 async function goToMiddleHallway() {
     middle_hallway.style.background = ' rgba(0, 255, 0, 0.7)';
     setTimeout(() => {
         middle_hallway.style.background = ' #DDDDDD';
-    }, 2000);
+    }, 1500);
 }
 
-async function updateScore() {
+async function errorInput() {
+    input_name.style.background = RED;
+    input_problem.style.background = RED;
+    setTimeout(() => {
+        input_name.style.background = '#ffffff';
+        input_problem.style.background = '#ffffff';
+    }, 1000);
+}
+
+function updateScore() {
     jsScore++;
     score.innerHTML = 'Clients: ' + jsScore;
 }
 
-async function updateTime () {
+function updateTime() {
     endTime = new Date().getTime();
-    let time =  endTime - startTime;
-    midTime.innerHTML = 'Mid Time: ' + time;
+    let time = endTime - startTime;
+    midTime.innerHTML = 'Last time: ' + time / 1000 + 's';
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }

@@ -180,8 +180,9 @@ input {
     height: 45px;
     width: 180px;
     border-radius: 25px;
-    border: antiquewhite;
+    border: #faebd7;
     margin: 5px 0;
+    text-align: center;
 
     font-family: 'CherryBomb';
     font-size: 22px;
@@ -190,12 +191,13 @@ input {
 .waiter-output-form {
     width: 300px;
     height: 150px;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .doc-output-form{
     width: 220px;
     height: 100px;
+    font-size: 18px;
 }
 
 .doctor-push {
