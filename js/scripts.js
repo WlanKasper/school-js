@@ -1,8 +1,8 @@
 const input_name = document.formInputInfo.inputName;
 const input_problem = document.formInputInfo.inputProblem;
 
-const waiting_room = document.formWaiterOutput.textview;
-const doctors_room = document.formDoctorOutput.textview;
+const waiting_room = document.getElementById('wait_disp');
+const doctors_room = document.getElementById('doc_disp');
 const waiters = document.getElementById('waitCounter');
 
 const score = document.getElementById('score');
@@ -25,9 +25,6 @@ const RED = '#FF0000';
 let startTime;
 let endTime;
 
-
-midTime.innerHTML += '00:00'
-
 let width_middle = (doctorBorder.offsetLeft - doctorBorder.offsetWidth) - waitingBlock.offsetLeft + 50;
 middle_hallway.style.width = width_middle + 'px';
 middle_hallway.style.height = '50px';
@@ -35,6 +32,8 @@ middle_hallway.style.backgroundColor = '#DDDDDD'
 
 let waitList = new Array();
 let isBusyDoc = false;
+
+doctors_room.innerHTML = 'Im free';
 
 function addNewClient() {
     let client = input_name.value + ': ' + input_problem.value;
@@ -52,18 +51,18 @@ function addNewClient() {
 function addNewClientToWaitList(client) {
     console.log('Client ' + client + ' waiting');
     goToLeftHallway();
-    waitList.push('Clien: ' + client);
-    waiting_room.value = waitList.join('; ');
+    waitList.push('Client ' + client);
+    waiting_room.innerHTML = waitList.join('<br>');
     modWaiters();
 }
 
 function displayNextClient(client) {
     if (client) {
-        doctors_room.value = client;
+        doctors_room.innerHTML = client;
     } else if (waitList.length != 0) {
-        doctors_room.value = 'Next ' + waitList[0];
+        doctors_room.innerHTML = 'Next ' + waitList[0];
     } else {
-        doctors_room.value = 'Im free';
+        doctors_room.innerHTML = 'Im free';
     }
 }
 
@@ -77,7 +76,7 @@ function healClient(client) {
     console.log('Doc healing: ' + client);
     isBusyDoc = true;
     doctorBorder.style.borderColor = RED;
-    waiting_room.value = waitList.join('; ');
+    waiting_room.innerHTML = waitList.join('<br>');
     setTimeout(() => {
         isBusyDoc = false;
         doctorBorder.style.borderColor = GREEN;
@@ -150,7 +149,7 @@ async function errorInput() {
 
 function updateScore() {
     jsScore++;
-    score.innerHTML = 'Clients: ' + jsScore;
+    score.innerHTML = 'Tot clients: ' + jsScore;
 }
 
 function updateTime() {
