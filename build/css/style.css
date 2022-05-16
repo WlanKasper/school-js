@@ -281,7 +281,7 @@ body.locked {
 
 .block {
   width: 70%;
-  min-height: 160px;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,7 +298,7 @@ body.locked {
 }
 
 .block img {
-  max-width: 60%;
+  max-width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -318,6 +318,10 @@ body.locked {
 @media (max-width: 767.98px) {
   .container {
     max-width: 740px;
+  }
+
+  .title_style {
+    font-size: 28px;
   }
 
   .shop_block-group {
